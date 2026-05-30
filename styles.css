@@ -148,6 +148,20 @@ a {
   letter-spacing: 0;
 }
 
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 26px;
+}
+
+.section-heading h2 {
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -168,9 +182,39 @@ a {
 }
 
 .panel p,
+.feature-row p,
 .policy p,
 .policy li {
   color: var(--muted);
+}
+
+.feature-list {
+  border-top: 1px solid var(--line);
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.feature-index {
+  color: color-mix(in srgb, var(--accent) 78%, var(--fg));
+  font-size: 0.82rem;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.feature-row h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+}
+
+.feature-row p {
+  max-width: 720px;
+  margin: 0;
 }
 
 .policy {
@@ -207,6 +251,11 @@ a {
   .hero,
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .hero {
